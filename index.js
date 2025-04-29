@@ -4,7 +4,7 @@ const pool = mysql2.createPool ({
     host: 'localhost',
     user: 'root',
     database: 'expo',
-    password: '1234',
+    password: 'password',
 });
 
 
