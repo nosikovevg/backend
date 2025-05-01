@@ -29,6 +29,12 @@ app.get('/', function (req, res) {
 
 });
 
+app.get('/add', function (req, res) {
+    console.log(req.body);
+    res.send(true);
+ });
+
+
 app.post('/add', function (req, res) {
    console.log(req.body);
    res.send(true);
