@@ -10,7 +10,7 @@ const pool = mysql2.createPool ({
 
 const app = express();
 
-
+app.use(express.urlencoded({ extended: false}));
 
 //async function getNotes() {
 //    const [rows] = await pool.query('SELECT * FROM tab1')
