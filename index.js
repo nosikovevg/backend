@@ -30,7 +30,7 @@ app.get('/', function (req, res) {
 })
 
 app.post('/addperson', async function (req, res) {
-   console.log(reg.body);
+   console.log(req.body);
    res.send(true);
 })
 
