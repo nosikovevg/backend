@@ -29,6 +29,10 @@ app.get('/', function (req, res) {
 
 })
 
+app.post('/addperson', async function (req, res) {
+   console.log(reg.body);
+   res.send(true);
+})
 
 app.listen(30333, ()=> {
     console.log("It's started", new Date());
