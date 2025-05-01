@@ -11,6 +11,14 @@ const pool = mysql2.createPool ({
 const app = express();
 
 
+
+//async function getNotes() {
+//    const [rows] = await pool.query('SELECT * FROM tab1')
+//    return rows  }  
+//
+//const notes = await getNotes()
+//console.log(notes)
+
 app.get('/', function (req, res) {
     pool.query('SELECT * FROM tab1').then(function(data) {
         res.json(data);
