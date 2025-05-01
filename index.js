@@ -29,7 +29,7 @@ app.get('/', function (req, res) {
 
 })
 
-app.post('/addperson', async function (req, res) {
+app.post('/add', function (req, res) {
    console.log(req.body);
    res.send(true);
 })
