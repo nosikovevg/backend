@@ -9,8 +9,9 @@ const pool = mysql2.createPool ({
 
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
-app.use(express.urlencoded());
 
 //async function getNotes() {
 //    const [rows] = await pool.query('SELECT * FROM tab1')
@@ -29,16 +30,17 @@ app.get('/', function (req, res) {
 
 });
 
-app.get('/add', function (req, res) {
-    console.log(req.body);
-    res.send(true);
- });
+//app.post('/add', function (req, res) {
+//    console.log(req.body);
+//    res.send(true);
+// });
 
-
-app.post('/add', function (req, res) {
-   console.log(req.body);
-   res.send(true);
+app.post("/add", function (request, response) {
+    if(!request.body) return response.sendStatus(400);
+    console.log(request.body);
+    response.send(`${request.body.nam} - ${request.body.ag}`);
 });
+
 
 app.listen(30333, ()=> {
     console.log("It's started", new Date());
