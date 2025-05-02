@@ -36,7 +36,7 @@ app.get('/', function (req, res) {
 //    res.send(true);
 // });
 
-app.post('/', function (request, response) {
+app.post('/add', function (request, response) {
     if(!request.body) return response.sendStatus(400);
     console.log(request.body);
     response.send(`${request.body.nam} - ${request.body.ag}`);
