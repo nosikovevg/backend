@@ -31,9 +31,14 @@ app.get('/', function (req, res) {
 
 });
 
-app.post('/add', function (req, res) {
+app.post('/add', async function (req, res) {
     console.log(req.body);
-   res.send(true);
+    const {nam, ag} = req.body;
+    await pool.query('INSERT INTO tab1 SET ?',{
+        name:nam,
+        age:ag
+    });
+   res.redirect(truruki.ru);
 });
 
 /*
