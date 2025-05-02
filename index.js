@@ -38,7 +38,7 @@ app.post('/add', async function (req, res) {
         name:nam,
         age:Number(ag)
     });
-  // res.redirect('http://truruki.ru/');
+   res.redirect('http://truruki.ru/');
 });
 
 /*
