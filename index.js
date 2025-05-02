@@ -36,7 +36,7 @@ app.post('/add', async function (req, res) {
     const {nam, ag} = req.body;
     await pool.query('INSERT INTO tab1 SET ?',{
         name:nam,
-        age:ag
+        age:Number(ag)
     });
   // res.redirect('http://truruki.ru/');
 });
