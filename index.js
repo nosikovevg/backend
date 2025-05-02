@@ -31,17 +31,18 @@ app.get('/', function (req, res) {
 
 });
 
-//app.post('/add', function (req, res) {
-//    console.log(req.body);
-//    res.send(true);
-// });
+app.post('/add', function (req, res) {
+    console.log(req.body);
+   res.send(true);
+});
 
+/*
 app.post('/add', function (request, response) {
     if(!request.body) return response.sendStatus(400);
     console.log(request.body);
-    response.send(`${request.body.nam} - ${request.body.ag}`);
+    response.send(`${request.body.nam} - ${request.body.ag}`);    
 });
-
+*/
 
 app.listen(30333, ()=> {
     console.log("It's started", new Date());
